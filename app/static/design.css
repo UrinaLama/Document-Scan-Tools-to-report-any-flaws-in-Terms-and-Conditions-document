@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+html, body, html * {
+    font-family: "Open Sans", sans-serif;    
+  }
+body {
+    padding-top: 56px;
+    background: #FCFBF8;
+  }
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.text-center {
+  text-align: center;
+}
+.header{
+  width: 100%;
+  position: fixed;        
+  background-color: #F8B301;; 
+  top: 0;
+  font-size: 15px;
+  color: #000; 
+  padding: 1rem 0;
+}
+.container{
+  margin-bottom: 5rem;
+  margin-top:0;
+}
+.title{
+    font-size: 28px;
+    text-align: center;
+    margin: 0.5rem 0 3rem 0;
+    font-weight: 600;
+}
+.modelOutput{
+  padding: 2rem 0;  
+  margin-left: 2rem;
+  background-color: #fff;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.innerWrapper{
+  margin: 0 2rem;
+}
+.modelTitle{
+  margin: 0 2rem;
+  font-size: 24px;
+}
+hr{
+  border: 1px solid #999;
+}
+::placeholder {
+  color: grey;
+  font-size: 14px;
+}
+.positive{
+  color: #006400;
+  margin:1rem 0;
+  max-height:120px;
+  overflow: auto;
+  padding-right: 1rem;
+  line-height: 1.7rem;
+  font-size: 16px;
+}
+.negative{
+  color: #a6001a;
+  margin: 1rem 0;
+  max-height:120px;
+  overflow: auto;
+  padding-right: 1rem;
+  line-height: 1.7rem;
+  font-size: 16px;
+}
+.btn{
+  background: #29264C;
+  color: #fff;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  border-color: #29264C;
+}
+.btn:hover{
+  color: #29264C;
+  background: #fff;
+  border-color:#29264C;
+}
+.copyright {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #F8B301; 
+  font-size: 15px;
+  color: #000; 
+  margin-top: 5rem;
+} 

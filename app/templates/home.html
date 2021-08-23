@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- custom stylesheet -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='design.css') }}">
+        <!-- bootstrap -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap/css/bootstrap.css') }}">
+        <!-- font awesome icons -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">    
+    </head>    
+    <body>
+        <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-6"><h4 class="title">Summarize Websites Privacy Text</h4></div>
+            </div>
+            <div class="row justify-content-center gy-5">
+                <form method = "post" class="form-inline">
+                    <div class="form-group lg-10">
+                        <input type="text" class="form-control" id="inputUrl" placeholder="Input URL here.." name="url">
+                    </div>
+                    <div class="form-group lg-2">
+                        <button type="submit" class="btn btn-primary">Summarize</button>
+                    </div>                    
+                 </form>
+            </div>
+            {%if data != None%}
+                <div class="row justify-content-center mt-4">
+                        <div class="col-9 modelOutput">
+                        <div class="col-9"><span class="modelTitle">Important Privacy Texts</span></div>
+                        <hr>
+                        <div class = "col-12"> 
+                            <div class="innerWrapper">
+                                <div class="positive">
+                                    {%for item in data["positive"]%}
+                                        <p>{{item}}</p>
+                                    {%endfor%}
+                                </div>
+                                <div class="negative">
+                                    {%for item in data["negative"]%}
+                                        <p>{{item}}</p>
+                                    {%endfor%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>    
+            {%endif%}        
+        </div>
+        <footer class="copyright">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2021 Copyright By Urina Lama, Rashika Karki  </div>        
+        </footer>
+    </body>
+</html>
